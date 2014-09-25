@@ -1,0 +1,19 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>iconfilter1.jpg</file>
+    <file>bluetone.jpg</file>
+    <file>blurr.jpg</file>
+    <file>bw.jpg</file>
+    <file>camerabooth_logo.png</file>
+    <file>camera-lens-icon.jpg</file>
+    <file>camera-lens-icon.png</file>
+    <file>contour.jpg</file>
+    <file>emboss.jpg</file>
+    <file>greentone.jpg</file>
+    <file>info_logo.jpg</file>
+    <file>info_logo.png</file>
+    <file>negative.jpg</file>
+    <file>redtone.jpg</file>
+    <file>Setting-icon.png</file>
+  </qresource>
+</RCC>

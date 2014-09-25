@@ -1,0 +1,48 @@
+import sys
+from PyQt4.QtGui import *
+from PyQt4.QtCore import *
+from PyQt4 import uic
+import PIL
+import cv2.cv as cv
+import cv2
+import time
+from PIL import Image,ImageQt,ImageEnhance
+
+class About:
+    def __init__(self):
+        dialog = QDialog(self)
+        layout = QVBoxLayout()
+        dialog.setFixedSize(250,150)
+
+        self.abo_label = QLabel.setText("Hello World")
+
+        layout.addWidget(self.abo_label)
+        dialog.setLayout(layout)
+        dialog.show()
+        
+class UI(QMainWindow):
+    def __init__(self):
+        QMainWindow.__init__(self,None)
+        uic.loadUi('pro.ui', self)
+
+        self.mainwindow = self.findChild(QWidget, "centralwidget")
+        self.view = self.findChild(QGraphicsView, "img")
+        self.cap_bt = self.findChild(QPushButton, "capturebt")
+        self.set_bt = self.findChild(QPushButton, "settingbt")
+        self.abo_bt = self.findChild(QPushButton, "aboutbt")
+        about = About()
+        self.abo_bt.clicked.connect()
+        self.se_img = self.findChild(QGraphicsView, "secretbt")
+        self.img_scene = QGraphicsScene()
+        self.se_scene = QGraphicsScene()
+
+def main():
+    app = QApplication(sys.argv)
+    win = UI()
+    win.show()
+    return app.exec_()
+
+if __name__ == "__main__":
+    sys.exit(main())
+    cv.DestroyWindow('camera')
+            
